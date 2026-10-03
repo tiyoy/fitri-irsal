@@ -1,0 +1,1894 @@
+/* ==========================================================================
+   Undangan Pernikahan Fitri & Irsal — Pure CSS (tanpa framework)
+   ========================================================================== */
+
+:root {
+    --white: #FFFFFF;
+    --cream: #E8D3C3;
+    --cream-light: #FDEBDD;
+    --brown: #8A6B57;
+    --brown-light: #AE8F7A;
+    --brown-dark: #9D7A5B;
+    --gray: #6C6C6C;
+    --gray-dark: #424242;
+    --maroon: #5B4447;
+}
+
+/* ---------- Reset & base ---------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+    vertical-align: middle;
+}
+
+iframe {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.section {
+    position: relative;
+}
+
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.spacer {
+    position: relative;
+}
+
+/* ---------- Tombol ---------- */
+
+.btn {
+    display: inline-block;
+    line-height: 1;
+    font-size: 15px;
+    padding: 12px 24px;
+    border-radius: 3px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn-dark {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2.3px;
+    color: var(--white);
+    background-color: var(--gray-dark);
+    border: 3px solid var(--cream);
+    border-radius: 11px;
+    padding: 12px 12px;
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+    color: var(--gray-dark);
+    background-color: var(--cream);
+}
+
+.btn-light {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: var(--gray-dark);
+    background-color: var(--cream-light);
+    border: 1px solid var(--white);
+    border-radius: 14px;
+    box-shadow: 0px 10px 30px -12px rgba(0, 0, 0, 0.5);
+}
+
+.btn-light .btn-icon {
+    margin-right: 10px;
+}
+
+.btn-light:hover,
+.btn-light:focus {
+    color: var(--cream);
+    background-color: var(--gray-dark);
+}
+
+/* ==========================================================================
+   HOME / HERO
+   ========================================================================== */
+
+.hero {
+    background-color: var(--white);
+}
+
+.hero-inner {
+    background-image: url("../img/back.jpg");
+    background-position: top center;
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
+.spacer-hero {
+    height: 146px;
+}
+
+.hero-subtitle {
+    text-align: center;
+    color: var(--gray);
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 80px;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    text-align: center;
+    color: var(--brown);
+    font-family: 'Playball', cursive;
+    font-size: 66px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    text-align: center;
+    color: var(--gray);
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    padding: 0 80px;
+    margin-bottom: 20px;
+}
+
+.hero-button-wrap {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   MEMPELAI
+   ========================================================================== */
+
+.couple-section {
+    background-color: var(--white);
+}
+
+.couple-inner {
+    background-image: url("../img/bg-mempelai.jpg");
+    background-position: top center;
+    background-size: cover;
+    padding-bottom: 132px;
+}
+
+.spacer-couple {
+    height: 10px;
+}
+
+.couple-salam {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.couple-salam .bismillah {
+    width: 250px;
+    margin-bottom: 12px;
+}
+
+.couple-salam h2 {
+    color: var(--brown-light);
+    font-family: 'Playball', cursive;
+    font-size: 38px;
+    font-weight: 500;
+}
+
+.couple-intro {
+    text-align: center;
+    color: var(--gray);
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    padding: 0 80px;
+    margin-bottom: 20px;
+}
+
+.couple-photo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.couple-photo img {
+    width: 310px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.couple-photo img:hover {
+    transform: scale(1.1);
+}
+
+.couple-name {
+    text-align: center;
+    color: var(--brown-light);
+    font-family: 'Playball', cursive;
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.couple-parents {
+    text-align: center;
+    color: var(--gray);
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.couple-and {
+    text-align: center;
+    color: var(--gray);
+    font-family: "Great Vibes", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   SHAPE DIVIDER
+   ========================================================================== */
+
+.shape-divider {
+    position: relative;
+    background-color: var(--cream);
+}
+
+.shape {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+    direction: ltr;
+}
+
+.shape-top {
+    top: -1px;
+}
+
+.shape-bottom {
+    bottom: -1px;
+}
+
+.shape svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.shape-top svg {
+    height: 41px;
+}
+
+.shape-bottom svg {
+    height: 55px;
+    transform: translateX(-50%) rotateY(180deg);
+}
+
+.shape-divider-lg .shape-bottom svg {
+    height: 83px;
+}
+
+.shape-fill {
+    fill: var(--white);
+}
+
+.shape-spacer {
+    height: 137px;
+}
+
+/* ==========================================================================
+   ACARA / COUNTDOWN
+   ========================================================================== */
+
+.event-section {
+    background-color: var(--white);
+}
+
+.event-inner {
+    background-image: url("../img/bg-event.jpg");
+    background-position: top center;
+    background-size: cover;
+    padding-top: 20px;
+}
+
+.spacer-event {
+    height: 10px;
+}
+
+.event-heading {
+    text-align: center;
+    color: var(--gray);
+    font-family: "Great Vibes", sans-serif;
+    font-size: 50px;
+    font-weight: 200;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+}
+
+.countdown-wrap {
+    margin: 0 160px 20px;
+    padding: 0 30px;
+}
+
+.countdown-items {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    margin: 0 -7px;
+    padding: 0;
+}
+
+.countdown-item {
+    flex: 1 1 0;
+}
+
+.countdown-box {
+    text-align: center;
+    margin: 0 7px;
+    padding: 10px;
+    border: 3px solid var(--white);
+    border-radius: 15px;
+    background: var(--cream);
+}
+
+.countdown-digits {
+    display: block;
+    text-align: center;
+    color: var(--gray);
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: -0.1px;
+}
+
+.countdown-label {
+    display: block;
+    text-align: center;
+    color: var(--gray);
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+}
+
+.event-quote {
+    text-align: center;
+    color: var(--gray);
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+}
+
+.event-card {
+    background-color: var(--cream-light);
+    border: 1px solid var(--white);
+    border-radius: 7px;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+    margin: 30px 0;
+    padding: 50px;
+}
+
+.event-card-title {
+    text-align: center;
+    color: #515151;
+    font-family: "Great Vibes", sans-serif;
+    font-size: 65px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    margin-bottom: 10px;
+}
+
+.event-card-date {
+    text-align: center;
+    color: var(--brown);
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.event-card-time {
+    text-align: center;
+    color: var(--brown);
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.event-card-address {
+    text-align: center;
+    color: var(--gray);
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.event-map {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.event-button-wrap {
+    text-align: center;
+    margin: 0 0 59px;
+}
+
+/* ==========================================================================
+   GALERI
+   ========================================================================== */
+
+.gallery-section {
+    background-color: var(--cream);
+}
+
+.gallery-inner {
+    background-color: var(--cream-light);
+    padding: 10px 10px 30px;
+}
+
+.gallery-title {
+    text-align: center;
+    color: var(--gray);
+    font-family: "Great Vibes", sans-serif;
+    font-size: 56px;
+    font-weight: 500;
+    margin: 37px 0 20px;
+}
+
+.gallery-carousel {
+    margin: 0 0 10px;
+}
+
+.carousel-viewport {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 500ms ease;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.carousel-slide a {
+    display: block;
+}
+
+.carousel-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+    font-size: 15px;
+    color: #1C2536;
+    padding: 10px;
+    user-select: none;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* ==========================================================================
+   AMPLOP DIGITAL
+   ========================================================================== */
+
+.gift-section {
+    background-color: var(--white);
+}
+
+.gift-inner {
+    background-image: url("../img/bg-amplop.jpg");
+    background-position: top center;
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
+.spacer-gift {
+    height: 50px;
+}
+
+.gift-title {
+    text-align: center;
+    color: var(--brown);
+    font-family: 'Playball', cursive;
+    font-size: 40px;
+    font-weight: 400;
+    margin: 18px 0 0;
+    padding: 50px 50px 10px;
+}
+
+.gift-text {
+    text-align: center;
+    color: var(--gray);
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1em;
+    margin: -20px 50px 30px;
+    padding: 66px 66px 20px;
+}
+
+.gift-card {
+    background-color: var(--white);
+    border: 1px solid var(--cream);
+    border-radius: 10px;
+    box-shadow: 0px 30px 25px -25px rgba(0, 0, 0, 0.5);
+    margin: 10px 10px 30px;
+    padding: 10px 30px 25px;
+}
+
+.gift-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gift-logo img {
+    width: 15%;
+    max-width: 50%;
+}
+
+.gift-divider {
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 20px;
+}
+
+.gift-divider span {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 3px solid #C87B3E;
+}
+
+.gift-number {
+    text-align: center;
+    color: #696969;
+    font-family: "Alata", sans-serif;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+}
+
+.gift-copy {
+    text-align: center;
+    margin: -15px 0 5px;
+}
+
+.btn-copy {
+    fill: var(--white);
+    color: var(--white);
+    background-color: var(--maroon);
+    border: 2px solid var(--white);
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    padding: 12px 24px;
+}
+
+.btn-copy .btn-icon {
+    margin-right: 5px;
+}
+
+.btn-copy:hover,
+.btn-copy:focus {
+    background-color: #BF956F;
+}
+
+.gift-name {
+    text-align: center;
+    color: #696969;
+    font-family: "Alata", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4em;
+}
+
+/* ==========================================================================
+   UCAPAN / GUESTBOOK
+   ========================================================================== */
+
+.wishes-section {
+    background-color: var(--white);
+}
+
+.wishes-inner {
+    background-image: url("../img/bg-ucapan.jpg");
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.spacer-wishes {
+    height: 10px;
+}
+
+.wishes-title {
+    text-align: center;
+    color: var(--brown-light);
+    font-family: "Philosopher", sans-serif;
+    font-size: 41px;
+    font-weight: 500;
+    margin: 33px 0 20px;
+}
+
+.wishes-subtitle {
+    text-align: center;
+    color: #4D4D4D;
+    font-family: "Alata", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.wishes-box {
+    padding: 20px 50px;
+    margin: 0 20px 25px;
+}
+
+.comment-form-container input[type="text"].form-control,
+.comment-form-container textarea.form-control,
+.comment-form-container select.form-control {
+    display: block;
+    width: 100%;
+    background-color: #fcfcfc;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+    color: #555f77;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    outline: 0;
+    transition: box-shadow 300ms;
+}
+
+.comment-form-container textarea.form-control {
+    resize: vertical;
+}
+
+.comment-form-container input[type="text"].form-control:focus,
+.comment-form-container textarea.form-control:focus,
+.comment-form-container select.form-control:focus {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
+.btn-send {
+    font-family: "Alata", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--maroon);
+    border: none;
+    border-radius: 20px;
+    padding: 11px 25px 15px;
+    transition: all 0.3s;
+}
+
+.btn-send:hover,
+.btn-send:focus {
+    background-color: #DAAB7F;
+}
+
+.guestbook-list {
+    text-align: left;
+    font-size: 14px;
+    width: 100%;
+    padding: 5px 15px 0 0;
+    height: 270px;
+    overflow: auto;
+    margin-top: 40px;
+}
+
+.user-guestbook {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.guestbook {
+    flex: 1;
+    display: block;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+    margin-left: 15px;
+    min-height: 60px;
+    position: relative;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.guestbook::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 9px;
+    border-width: 10px 10px 10px 0;
+    border-style: solid;
+    border-color: transparent #fcfcfc;
+}
+
+.guestbook-name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #acb4c2;
+    text-decoration: none;
+}
+
+.wdp-confirm {
+    color: #fff;
+    margin-left: 4px;
+    border-radius: 3px;
+    background: #c18c14;
+    font-size: .7em;
+    padding: 2px 5px 3px;
+    white-space: nowrap;
+}
+
+.guestbook-message {
+    font-size: 15px;
+    color: #555f77;
+    font-weight: 600;
+    margin-top: 4px;
+    word-wrap: break-word;
+}
+
+/* ==========================================================================
+   ADMIN (/#admin)
+   ========================================================================== */
+
+.admin-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 4000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+}
+
+.admin-box {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    max-height: 85vh;
+    overflow-y: auto;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 30px 28px;
+}
+
+.admin-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    line-height: 1;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #eee;
+    color: #555;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.admin-close:hover,
+.admin-close:focus {
+    background-color: var(--maroon);
+    color: #fff;
+}
+
+.admin-heading {
+    text-align: center;
+    color: var(--brown);
+    font-family: 'Playball', cursive;
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.admin-desc {
+    text-align: center;
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.admin-box .form-control {
+    display: block;
+    width: 100%;
+    background-color: #fcfcfc;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+    color: #555f77;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    outline: 0;
+}
+
+.admin-box .form-control:focus {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
+.btn-admin-login {
+    width: 100%;
+}
+
+.admin-list {
+    max-height: 45vh;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.admin-empty {
+    text-align: center;
+    color: var(--gray);
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+.admin-item {
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+    padding: 10px 12px;
+    margin-bottom: 10px;
+}
+
+.admin-item-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.admin-item-name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #acb4c2;
+}
+
+.admin-item-message {
+    font-size: 14px;
+    color: #555f77;
+    font-weight: 600;
+    word-wrap: break-word;
+    margin-bottom: 8px;
+}
+
+.btn-admin-delete {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 6px;
+    background-color: #e05252;
+    color: #fff;
+    font-size: 12px;
+    font-family: inherit;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-admin-delete:hover,
+.btn-admin-delete:focus {
+    background-color: #b93a3a;
+}
+
+.admin-actions {
+    text-align: center;
+}
+
+.btn-admin-logout {
+    font-family: "Alata", sans-serif;
+    font-size: 14px;
+    color: var(--maroon);
+    background-color: transparent;
+    border: 1px solid var(--maroon);
+    border-radius: 20px;
+    padding: 9px 25px;
+}
+
+.btn-admin-logout:hover,
+.btn-admin-logout:focus {
+    color: #fff;
+    background-color: var(--maroon);
+}
+
+/* ---------- Toast notifikasi ---------- */
+
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 120px;
+    transform: translateX(-50%);
+    z-index: 5000;
+    max-width: 90%;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.toast-success {
+    background-color: #43a047;
+}
+
+.toast-error {
+    background-color: #e05252;
+}
+
+/* ==========================================================================
+   PENUTUP
+   ========================================================================== */
+
+.closing-section {
+    background-color: var(--white);
+}
+
+.closing-inner {
+    background-image: url("../img/bg-event.jpg");
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.closing-photo {
+    text-align: center;
+    margin: 19px 0 20px;
+}
+
+.closing-photo img {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.closing-text {
+    text-align: center;
+    color: var(--gray);
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    padding: 0 300px;
+    margin-bottom: 20px;
+}
+
+.closing-salam {
+    text-align: center;
+    color: var(--gray);
+    font-family: 'Playball', cursive;
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.closing-names {
+    text-align: center;
+    color: var(--brown-light);
+    font-family: 'Playball', cursive;
+    font-size: 33px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.closing-credit {
+    text-align: center;
+    color: var(--gray);
+    font-family: 'Playball', cursive;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.closing-credit a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.spacer-closing {
+    height: 132px;
+}
+
+/* ==========================================================================
+   MODAL SAMPUL
+   ========================================================================== */
+
+.modalx {
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    background-image: url("../img/bg-sampul.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(0);
+}
+
+.modalx.removeModals {
+    transform: translateY(200%);
+    transition: 0.4s ease-in-out;
+}
+
+.overlayy {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2001;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background-image: url("../img/frame.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-modalx {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 2002;
+    top: 10px;
+    left: 0;
+    color: #fff;
+}
+
+.info_modalx {
+    width: 100%;
+    display: flex;
+    height: 92%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info_modalx > div {
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+
+.modal-photo img {
+    width: 28%;
+    border-radius: 10%;
+}
+
+.wdp-mempelai {
+    font-family: 'Playball', cursive;
+    font-size: 35px;
+    color: var(--brown-dark);
+    margin-top: 10px;
+}
+
+.wdp-dear {
+    margin-top: 15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    color: var(--gray);
+}
+
+.wdp-name {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: #715746;
+}
+
+.wdp-button-wrapper {
+    margin-top: 10px;
+}
+
+.btn-open {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--brown);
+    border: none;
+    border-radius: 17px;
+    padding: 15px 30px;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.btn-open:hover,
+.btn-open:focus {
+    background-color: var(--brown-light);
+}
+
+/* ==========================================================================
+   AUDIO
+   ========================================================================== */
+
+.audio-box {
+    position: fixed;
+    bottom: 150px;
+    right: 40px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.audio-icon-wrapper {
+    text-align: right;
+}
+
+.audio-icon {
+    display: inline-block;
+    line-height: 1;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #303030;
+    color: #EFE0CD;
+    transition: all 0.3s;
+}
+
+.audio-icon i {
+    display: inline-block;
+    width: 1em;
+    text-align: center;
+}
+
+.audio-box:hover .audio-icon {
+    background-color: #D2B6A7;
+    color: var(--gray-dark);
+    transform: scale(0.9);
+}
+
+/* ==========================================================================
+   LIGHTBOX
+   ========================================================================== */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+}
+
+.lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-figure {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    margin: 0;
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 85vh;
+    pointer-events: auto;
+}
+
+.lightbox-title {
+    color: #cccccc;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    z-index: 2;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 22px;
+    user-select: none;
+    transition: color 0.3s;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    color: var(--cream);
+}
+
+.lightbox-close {
+    top: 10px;
+    right: 10px;
+}
+
+.lightbox-prev {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-next {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ==========================================================================
+   STICKY MENU
+   ========================================================================== */
+
+.menusticky {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: var(--white);
+    box-shadow: 0px -2px 18px -8px rgba(0, 0, 0, 0.5);
+    padding: 5px 0 10px;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.menu-item {
+    flex: 1 1 0;
+    text-align: center;
+}
+
+.menu-item a {
+    display: block;
+}
+
+.menu-item img {
+    max-width: 60%;
+    transition: transform 0.3s;
+}
+
+.menu-item a:hover img {
+    transform: scale(1.1);
+}
+
+.menu-item h2 {
+    color: var(--brown-light);
+    font-size: 25px;
+    font-weight: 400;
+    margin: -24px 0 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE — Tablet (max-width: 1024px)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+
+    /* hero */
+    .spacer-hero {
+        height: 102px;
+    }
+
+    .hero-title {
+        font-size: 49px;
+    }
+
+    .hero-button-wrap .btn-dark {
+        font-size: 14px;
+    }
+
+    /* mempelai */
+    .spacer-couple {
+        height: 17px;
+    }
+
+    .couple-photo img {
+        width: 275px;
+    }
+
+    /* shape divider */
+    .shape-top svg {
+        height: 37px;
+    }
+
+    .shape-bottom svg {
+        height: 29px;
+    }
+
+    .shape-divider-lg .shape-bottom svg {
+        height: 24px;
+    }
+
+    .shape-spacer {
+        height: 92px;
+    }
+
+    /* acara */
+    .event-inner {
+        padding: 20px 20px 0;
+    }
+
+    .countdown-wrap {
+        margin: 0 50px 20px;
+        padding: 15px;
+    }
+
+    .countdown-items {
+        margin: 0 -8px;
+    }
+
+    .countdown-box {
+        margin: 0 8px;
+        padding: 7px;
+        border-width: 0;
+    }
+
+    .countdown-digits {
+        font-size: 19px;
+    }
+
+    .countdown-label {
+        font-size: 18px;
+    }
+
+    .event-card {
+        padding: 25px 0;
+    }
+
+    .event-button-wrap {
+        margin: 0 0 50px;
+    }
+
+    /* galeri */
+    .gallery-title {
+        margin: 23px 0 15px;
+    }
+
+    /* amplop */
+    .gift-inner {
+        padding: 50px 20px;
+    }
+
+    .gift-title {
+        margin: 43px 0 20px;
+        padding: 0;
+    }
+
+    .gift-text {
+        font-size: 18px;
+        margin: 0 100px 30px;
+        padding: 0;
+    }
+
+    .gift-logo img {
+        width: 27%;
+    }
+
+    .gift-number {
+        font-size: 17px;
+    }
+
+    .btn-copy {
+        font-size: 13px;
+    }
+
+    .gift-name {
+        font-size: 16px;
+    }
+
+    /* ucapan */
+    .wishes-inner {
+        background-position: top center;
+    }
+
+    .wishes-title {
+        font-size: 46px;
+    }
+
+    .wishes-subtitle {
+        font-size: 18px;
+    }
+
+    .wishes-box {
+        padding: 0 20px;
+        margin: 0 20px;
+    }
+
+    /* penutup */
+    .closing-inner {
+        background-position: top center;
+    }
+
+    .closing-photo img {
+        width: 33%;
+    }
+
+    .closing-text {
+        font-size: 17px;
+        padding: 0 10%;
+    }
+
+    .closing-salam {
+        font-size: 27px;
+    }
+
+    /* modal */
+    .modal-photo img {
+        width: 46%;
+    }
+
+    /* sticky menu */
+    .menusticky {
+        padding: 10px 75px 25px;
+    }
+
+    .menu-item h2 {
+        font-size: 20px;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE — Mobile (max-width: 767px)
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* hero */
+    .hero-inner {
+        padding-bottom: 10px;
+    }
+
+    .spacer-hero {
+        height: 68px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        letter-spacing: 1.4px;
+        padding: 0 20px;
+        margin-bottom: -11px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        line-height: 2.8em;
+        letter-spacing: -0.5px;
+        margin: -13px 0 -10px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        padding: 0 20px;
+        margin-bottom: -9px;
+    }
+
+    .hero-date {
+        margin-bottom: 20px;
+    }
+
+    .hero-button-wrap {
+        margin: -27px 0 -9px;
+    }
+
+    .hero-button-wrap .btn-dark {
+        font-size: 12px;
+        letter-spacing: 1.4px;
+        border-width: 1px;
+        padding: 8px 8px 6px;
+    }
+
+    /* mempelai */
+    .couple-inner {
+        padding-bottom: 110px;
+    }
+
+    .spacer-couple {
+        height: 43px;
+    }
+
+    .couple-salam h2 {
+        font-size: 21px;
+    }
+
+    .couple-salam {
+        margin: -14px 0 20px;
+    }
+
+    .couple-intro {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        padding: 0 20px;
+        margin-top: -10px;
+    }
+
+    .couple-photo img {
+        width: 50%;
+        border-radius: 20px;
+    }
+
+    .couple-name {
+        font-size: 25px;
+    }
+
+    .couple-parents {
+        font-size: 14px;
+        padding: 0 20px;
+        margin-top: -8px;
+    }
+
+    .couple-and {
+        font-size: 22px;
+        margin: -5px 0 16px;
+    }
+
+    /* shape divider */
+    .shape-top svg {
+        height: 20px;
+    }
+
+    .shape-bottom svg,
+    .shape-divider-lg .shape-bottom svg {
+        height: 23px;
+    }
+
+    .shape-spacer {
+        height: 65px;
+    }
+
+    /* acara */
+    .event-inner {
+        padding: 20px 20px 0;
+    }
+
+    .spacer-event {
+        height: 10px;
+        margin-top: 28px;
+    }
+
+    .event-heading {
+        font-size: 28px;
+        letter-spacing: 0.4px;
+        margin-top: -8px;
+    }
+
+    .countdown-wrap {
+        margin: 10px 0 20px;
+        padding: 0 18px;
+    }
+
+    .countdown-items {
+        margin: 0 -4px;
+    }
+
+    .countdown-box {
+        margin: 0 4px;
+        padding: 2px 0 0;
+        border-width: 1px;
+    }
+
+    .countdown-digits {
+        font-size: 14px;
+        line-height: 1.1em;
+    }
+
+    .countdown-label {
+        font-size: 11px;
+        line-height: 1.7em;
+        letter-spacing: 0.2px;
+    }
+
+    .event-quote {
+        font-size: 13px;
+        letter-spacing: 0.2px;
+        margin: 7px 15px 20px;
+    }
+
+    .event-card {
+        border-width: 2px;
+        margin: 9% 0 0;
+        padding: 20px 7% 25px;
+    }
+
+    .event-card-title {
+        font-size: 34px;
+    }
+
+    .event-card-date {
+        font-size: 18px;
+        letter-spacing: 0.7px;
+    }
+
+    .event-card-time,
+    .event-card-address {
+        font-size: 14px;
+    }
+
+    .event-button-wrap {
+        margin: 30px 0 27px;
+    }
+
+    .event-button-wrap .btn-light {
+        font-size: 14px;
+        border-width: 2px;
+        padding: 11px 11px 10px;
+    }
+
+    /* galeri */
+    .gallery-inner {
+        padding: 0 0 29px;
+    }
+
+    .gallery-title {
+        font-size: 35px;
+        letter-spacing: 1.6px;
+        margin: 0;
+        padding: 39px 0 21px;
+    }
+
+    .gallery-carousel {
+        margin: -22px 16px 0;
+    }
+
+    .carousel-image {
+        aspect-ratio: auto;
+        height: 243px;
+    }
+
+    /* amplop */
+    .gift-inner {
+        padding: 35px 35px 50px;
+    }
+
+    .spacer-gift {
+        height: 30px;
+    }
+
+    .gift-title {
+        font-size: 30px;
+        letter-spacing: 0.3px;
+        margin: 0 0 20px;
+        padding: 0;
+    }
+
+    .gift-text {
+        font-size: 13px;
+        letter-spacing: 0.2px;
+        margin: 3px 0 20px;
+        padding: 0;
+    }
+
+    .gift-card {
+        border-width: 2px;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .gift-card + .gift-card {
+        margin-top: 30px;
+        border-radius: 20px;
+    }
+
+    .gift-logo {
+        margin-top: 11px;
+    }
+
+    .gift-logo img {
+        width: 52%;
+        max-width: 50%;
+    }
+
+    .gift-number {
+        font-size: 14px;
+    }
+
+    .btn-copy {
+        font-size: 13px;
+    }
+
+    .gift-name {
+        font-size: 13px;
+    }
+
+    /* ucapan */
+    .wishes-inner {
+        background-position: top center;
+    }
+
+    .wishes-title {
+        font-size: 33px;
+        margin: 20px 0 20px;
+    }
+
+    .wishes-subtitle {
+        font-size: 14px;
+        margin: -12px 0 20px;
+    }
+
+    .wishes-box {
+        padding: 0 20px 54px;
+        margin: 10px 0 0;
+    }
+
+    .btn-send {
+        font-size: 11px;
+    }
+
+    /* penutup */
+    .closing-inner {
+        background-position: top center;
+        padding-bottom: 14px;
+    }
+
+    .closing-photo {
+        margin: 23px 0 20px;
+    }
+
+    .closing-photo img {
+        width: 49%;
+    }
+
+    .closing-text {
+        font-size: 14px;
+        padding: 0 33px;
+    }
+
+    .closing-salam {
+        font-size: 20px;
+    }
+
+    .closing-names {
+        font-size: 27px;
+    }
+
+    .spacer-closing {
+        height: 43px;
+    }
+
+    /* modal */
+    .modal-photo img {
+        width: 70%;
+    }
+
+    .wdp-mempelai {
+        font-size: 33px;
+    }
+
+    .wdp-dear {
+        margin-top: 14px;
+        font-size: 14px;
+    }
+
+    .wdp-name {
+        font-size: 19px;
+        color: #715746;
+    }
+
+    .wdp-button-wrapper {
+        margin-top: 28px;
+    }
+
+    .btn-open {
+        font-size: 14px;
+    }
+
+    /* audio */
+    .audio-box {
+        right: 25px;
+        bottom: 140px;
+    }
+
+    .audio-icon {
+        font-size: 15px;
+    }
+
+    /* sticky menu */
+    .menusticky {
+        padding: 0;
+    }
+
+    .menu-item a {
+        padding: 15px;
+    }
+
+    .menu-item img {
+        width: 96%;
+        max-width: 100%;
+    }
+
+    .menu-item h2 {
+        font-size: 10px;
+        margin: -19px 0 0;
+    }
+}
