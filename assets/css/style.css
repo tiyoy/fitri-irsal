@@ -479,7 +479,7 @@ button {
 
 .gallery-inner {
     background-color: var(--cream-light);
-    padding: 10px 10px 30px;
+    padding: 30px 10px 30px;
 }
 
 .gallery-title {
@@ -488,7 +488,7 @@ button {
     font-family: "Great Vibes", sans-serif;
     font-size: 56px;
     font-weight: 500;
-    margin: 37px 0 20px;
+    margin: 37px 0 45px;
 }
 
 .gallery-carousel {
@@ -1432,7 +1432,7 @@ button {
 
     /* galeri */
     .gallery-title {
-        margin: 23px 0 15px;
+        margin: 23px 0 35px;
     }
 
     /* amplop */
@@ -1714,7 +1714,7 @@ button {
         font-size: 35px;
         letter-spacing: 1.6px;
         margin: 0;
-        padding: 39px 0 21px;
+        padding: 39px 0 40px;
     }
 
     .gallery-carousel {

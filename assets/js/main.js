@@ -286,6 +286,31 @@
     var guestbookList = document.querySelector('.guestbook-list');
     var commentForm = document.getElementById('comments');
 
+    // ucapan bawaan yang selalu tampil bila belum ada data tamu
+    var DEFAULT_WISHES = [
+        {
+            name: 'Cecep Maulana',
+            attendance: 'hadir',
+            message: 'Selamat menempuh hidup baru untuk kedua mempelai! Semoga menjadi keluarga yang sakinah, mawaddah, warahmah. Aamiin.',
+            timestamp: '2 jam yang lalu',
+            confirm: 'Hadir'
+        },
+        {
+            name: 'Siti Nurhaliza',
+            attendance: 'hadir',
+            message: "Barakallahu lakuma wa baraka alaikuma wa jama'a bainakuma fii khoir. Lancar sampai hari H yaa cantik!",
+            timestamp: '5 jam yang lalu',
+            confirm: 'Hadir'
+        },
+        {
+            name: 'Andi & Sarah',
+            attendance: 'ragu',
+            message: 'Happy wedding Alamsyah & Aulia! Semoga cinta kalian selalu bersemi abadi dan saling melengkapi selamanya.',
+            timestamp: '1 hari yang lalu',
+            confirm: 'Mungkin Hadir'
+        }
+    ];
+
     // cache memori + localStorage. Bila localStorage diblokir browser
     // (mis. dibuka via file://, cookies diblokir, atau mode privat),
     // ucapan tetap tersimpan di memori dan tampil selama sesi ini.
@@ -296,9 +321,17 @@
             return wishCache.slice();
         }
         try {
-            wishCache = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+            wishCache = JSON.parse(localStorage.getItem(STORAGE_KEY));
         } catch (e) {
-            wishCache = [];
+            wishCache = null;
+        }
+        if (!wishCache || wishCache.length === 0) {
+            wishCache = DEFAULT_WISHES.slice();
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(wishCache));
+            } catch (e) {
+                // penyimpanan permanen gagal: data tetap ada di cache memori
+            }
         }
         return wishCache.slice();
     }
@@ -328,8 +361,15 @@
         message.setAttribute('class', 'guestbook-message');
 
         link.textContent = wish.name;
-        span.textContent = wish.confirm;
+        span.textContent = wish.confirm ? wish.confirm : (wish.attendance === 'hadir' ? 'Hadir' : 'Mungkin Hadir');
         message.textContent = wish.message;
+        if (wish.timestamp) {
+            var time = document.createElement('small');
+            time.setAttribute('class', 'guestbook-time');
+            time.textContent = wish.timestamp;
+            message.appendChild(document.createElement('br'));
+            message.appendChild(time);
+        }
 
         guestbookList.appendChild(main);
         main.appendChild(second);
